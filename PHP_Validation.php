@@ -21,7 +21,7 @@
                 echo "Gender: $gender<br><br>";
             }
         ?>
-        <form action="" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         Name : <input type="text" name="name" required><br><br>
         E-Mail : <input type="email" name="email" required><br><br>
         Website:   <input type="text" name="website"><br><br>
