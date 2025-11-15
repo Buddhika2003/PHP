@@ -8,3 +8,5 @@
 •When someone submit a name and email, then it opens a new website was opened and give a echo message.
 •I have learn GET and POST methods.
 
+
+•Now I have created a form for submitted form data to the page itself, instead of jumping to a different page
