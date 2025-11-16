@@ -27,6 +27,34 @@
                 $data = htmlspecialchars($data);
                 return $data;
             }
+            
+            $nameErr = $emailErr = $genderErr = $websiteErr = $commentErr ="";
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+                if(empty($_POST['name'])){
+                    $nameErr = "Name is required";
+                } else {
+                    $name = test_input($_POST['name']);
+                }
+                if(empty($_POST['email'])){
+                    $emailErr = "Email is required";
+                }else{
+                    $email = test_input($_POST['email']);
+                }
+                if(empty($_POST['gender'])){
+                    $genderErr = "Gender is required";
+                }else{
+                    $gender = test_input($_POST['gender']);
+                }
+                if(empty($_POST['website'])){
+                    $website = "";
+                }else{
+                    $website = test_input($_POST['website']);
+                }
+                if(empty($_POST['comment'])){
+                    $comment = "";
+                }else{
+                    $comment = test_input($_POST['comment']);
+                }
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         Name : <input type="text" name="name" required><br><br>
