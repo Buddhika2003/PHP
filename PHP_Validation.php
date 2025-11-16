@@ -20,6 +20,13 @@
                 echo "Comment: $comment<br>";
                 echo "Gender: $gender<br><br>";
             }
+
+            function test_input($data){
+                $data = trim($data);
+                $data = striplashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         Name : <input type="text" name="name" required><br><br>
